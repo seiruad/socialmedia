@@ -1,0 +1,36 @@
+@import 'app-conf/styles/_mixins.scss';
+@import 'app-conf/styles/_variables.scss';
+@import './feature-config/_styles.module.scss';
+
+
+.container {
+  @include font;
+  
+  width: 400px;
+  max-width: 400px;
+  
+  margin: 1rem;
+  padding: 2rem;
+
+  @include theme-aware(background, wrapper-background);
+  border-radius: map-get($border-radius, default);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+
+
+.form__title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: bold;
+  @include theme-aware(color, font);
+}
+
+
+@media (max-width: 1000px), screen and (orientation: portrait) { 
+  .container {
+    box-shadow: none;
+    // width: 0;
+    max-width: 370px;
+  }
+}

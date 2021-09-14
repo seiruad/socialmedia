@@ -1,0 +1,109 @@
+@import 'app-config/styles/mixins.scss';
+@import 'app-config/styles/variables.scss';
+
+.PostCreator {
+  @include glass-standart();
+
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+
+  width: 566px;
+  min-height: 100px;
+}
+
+.Title {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.InputGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  padding: 15px 15px 0 15px;
+  border-bottom: 1px solid rgba($color: #fff, $alpha: 0);
+}
+
+.InputGroup.active {
+  border-bottom: 1px solid $white;
+}
+
+.Textarea,
+.InputMessage {
+  width: 520px;
+}
+
+.Textarea {
+  resize: none;
+  color: #424242;
+  height: 36px;
+  padding-bottom: 0;
+  resize: none;
+  font-size: 1rem;
+  border: none;
+  background: none ;
+  // color: $color-error;
+  // padding: 15px 0 0 0;
+}
+
+.Textarea:is(:focus) {  
+
+}
+
+
+.Textarea::placeholder {
+  color: #8e8e8e;
+}
+
+.Textarea::-webkit-scrollbar {
+  width: 0;
+}
+
+
+
+.InputMessage {
+  text-transform: lowercase;
+  text-align: right;
+  padding: 7px 0 4px 0;
+  color: $color-error;
+  font-size: 0.95rem;
+}
+
+.Control {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 15px 0 15px;
+
+}
+
+.SubmitButton {
+  @include non-select;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 15px;
+  border: none;
+  font-weight: 700;
+  font-size: 1.3rem;
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+
+  border: 1px solid #fff;
+  border-width: 0 1px 0 1px;
+  color: #424242;
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba($color: #000000, $alpha: 0.2);
+  backdrop-filter: blur($backdrop-blur);
+  text-transform: capitalize;
+}
+
+.SubmitButton:hover {
+  background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.15));
+  box-shadow: 0 0 6px rgba($color: #000000, $alpha: 0.4);
+
+
+}
+

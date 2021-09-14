@@ -1,0 +1,43 @@
+@import 'app-config/styles/_mixins.scss';
+@import 'app-config/styles/_variables.scss';
+@import 'features/auth/config/_styles.module.scss';
+
+
+// $color-primary: #009579;
+// $color-primary-dark: #007f67;
+// $color-secondary: #252c6a;
+// $color-error: #cc3333;
+// $color-success: #4bb544;
+
+
+
+.form__button { 
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  @include font;
+  width: 100%;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: map-get($border-radius, default);
+  outline: none;
+  cursor: pointer;
+  @include theme-aware(background, button-background);
+  @include theme-aware(color, button-font);
+  transition-property: background;
+  transition-duration: .1;
+
+  &:active {
+    transform: scale(0.98);
+  }
+  &:visited {
+    transform: scale(0.6);
+  }
+}
+
+@media (hover: hover) {
+  .form__button:hover {
+    @include theme-aware(background, button-background-hover);
+  }
+}

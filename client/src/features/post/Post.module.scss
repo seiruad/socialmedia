@@ -1,0 +1,97 @@
+@import 'app-config/styles/mixins.scss';
+@import 'app-config/styles/variables.scss';
+
+
+.Post {
+  width: 566px;
+  display: flex;
+  padding: 10px;
+  margin-bottom: 25px;
+  background: rgba($color: #000000, $alpha: 1.0);
+  background: linear-gradient(to right bottom, $white-alpha-a, $white-alpha-b);
+  backdrop-filter: blur($backdrop-blur);
+  border: 1px solid #fafafa;
+  color: #424242; // VARIABLE
+  border-radius: $br-alpha; 
+  box-shadow: 0 0 6px rgba($color: #000000, $alpha: .2);
+  transition: all .2s ease 0s;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+}
+
+.Left {
+  width: 66px;
+  text-align: right;
+  .Avatar {
+    @include non-select;
+    width: 44px;
+    height: 44px;
+    box-shadow: 0 0 4px rgba($color: #000000, $alpha: 0.2);
+    border-radius: $border-radius-beta;
+    position: relative;
+
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: $border-radius-beta; 
+      object-fit: contain;
+    }
+    .Filter {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: $border-radius-beta;
+      box-shadow: 0 0 4px rgba($color: #000000, $alpha: 0.2);
+      @include theme-aware(background, filter-primary);
+      border: 1px solid rgba($color: #fff, $alpha: 0.5);
+      border-width: 1px 1px 1px 1px;
+    }
+  }
+}
+
+.Body {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  > * {
+    text-align: left;
+    margin-bottom: 14px;
+  }
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.Header {
+  > .PublicName {
+    @include non-select;
+    font-weight: 700;
+    font-size: 1.2rem;
+    background: linear-gradient(180deg, $white-alpha-b, $white-alpha-a)  ;
+    border: 1px solid $white;
+    border-width: 1px 0 1px 0;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    text-transform: capitalize;
+  }
+  > .Date {
+    @include non-select;
+    color: #757575;
+    text-transform: lowercase;
+    font-size: .85rem;
+    vertical-align: middle;
+  }
+}
+
+
+.Content {
+  font-weight: 400;
+  font-size: 1rem;
+}

@@ -1,0 +1,63 @@
+@import 'app-config/styles/_mixins.scss';
+@import 'app-config/styles/_variables.scss';
+@import 'features/auth/config/_styles.module.scss';
+
+
+
+.form__input_group {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.form__icon {
+  position:relative;
+  margin: 0;
+  display: inline-block;
+  padding: 0.75rem;
+  position: absolute;
+  padding: 10px;
+  min-width: 40px;
+}
+
+
+.form__input { 
+  display: inline-block;
+  width: 100%;
+  padding: 0.75rem;
+  padding-left: 40px;
+
+  border-radius: map-get($border-radius, default);
+  outline: none;
+  border: 1.5px solid;
+  @include theme-aware(border-color, input-border);
+
+  @include theme-aware(background, input-background);
+  @include theme-aware(color, font);
+  @include font;
+  transition: background 0.2s, border-color 0.2s;
+
+  &:focus {
+    @include theme-aware(border-color, input-border-focus);
+    @include theme-aware(background, input-background-focus);
+  }
+
+  &::placeholder {
+    color: rgba(34, 23, 20, 0.6);
+  }
+
+  &.form__input__error {
+    @include theme-aware(color, error);
+    @include theme-aware(border-color, error);
+  }
+}
+
+.form__input_message {
+  @include font;
+  margin: 0;
+  padding: 0;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+
+  @include theme-aware(color, error);
+  text-align: center;
+}

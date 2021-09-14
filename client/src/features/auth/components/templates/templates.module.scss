@@ -1,0 +1,49 @@
+@import 'app-config/styles/_mixins.scss';
+@import 'app-config/styles/_variables.scss';
+@import 'features/auth/config/_styles.module.scss';
+
+
+.container {
+  @include font;
+  
+  width: 400px;
+  max-width: 400px;
+  
+  margin: 1rem;
+  padding: 2rem;
+
+  @include theme-aware(background, wrapper-background);
+  border-radius: map-get($border-radius, default);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.form__title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: bold;
+  @include theme-aware(color, font);
+}
+
+.form__text {
+  text-align: center;
+}
+
+.form__link {
+  @include theme-aware(color, link-font);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form__link:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 1000px), screen and (orientation: portrait) { 
+  .container {
+    box-shadow: none;
+    max-width: 370px;
+  }
+}

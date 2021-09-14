@@ -1,0 +1,42 @@
+// @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+@import 'app-config/styles/mixins.scss';
+@import 'app-config/styles/variables.scss';
+
+* {
+  box-sizing: border-box;
+  outline: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Comfortaa', cursive;
+}
+
+body {
+  margin: 0;
+  font-size: 18px;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+  font-family: -apple-system, BlinkMacSystemFont, 'Comfortaa', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  overflow-y: auto;
+
+
+  @include theme-aware(background, gradient);
+  // background-color: rgba($color: #ffffff, $alpha: .5);
+  // backdrop-filter: blur($backdrop-blur);
+  background-size: contain contain;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.App {
+  // @include theme-aware(background, middle-glass);
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+

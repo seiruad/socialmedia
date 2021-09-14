@@ -1,0 +1,20 @@
+@import 'app-config/styles/_mixins.scss';
+@import 'app-config/styles/_variables.scss';
+@import 'features/auth/config/_styles.module.scss';
+
+.form__text {
+  @include theme-aware(color, font);
+  text-align: center;
+}
+
+.form__link {
+  padding-left: 6px;
+  @include theme-aware(color, link-font);
+  // color: #550000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form__link:hover {
+  text-decoration: underline;
+}

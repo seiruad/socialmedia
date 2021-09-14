@@ -1,0 +1,43 @@
+/**
+ * theme-aware - Change color of a css property based on the currently active theme
+ *
+ * @param  {key}     CSS property
+ * @param  {color}   Color name defined in the themes under _color-palette.scss
+ *
+ * @example - @include theme-aware('background', 'color-background');
+ * @returns - background: #FFF;
+ */
+@mixin theme-aware($key, $color) {
+  @each $theme-name, $theme-color in $themes {
+    @if $theme-name == 'default' {
+      #{$key}: map-get(map-get($themes, $theme-name), $color)
+    }  @else {
+      &.theme-#{$theme-name}  {
+        #{$key}: map-get(map-get($themes, $theme-name), $color)
+      }
+    }
+  }
+}
+
+
+@mixin non-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+@mixin glass-standart {
+  padding: 10px;
+  background: rgba($color: #fff, $alpha: 1.0);
+  background: linear-gradient(to right bottom, $white-alpha-a, $white-alpha-b);
+  backdrop-filter: blur($backdrop-blur);
+  border: 1px solid #fafafa;
+  color: #424242; // VARIABLE
+  border-radius: $br-alpha; 
+  box-shadow: 0 0 6px rgba($color: #000000, $alpha: .2);
+}

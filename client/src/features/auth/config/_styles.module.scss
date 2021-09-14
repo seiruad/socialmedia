@@ -1,0 +1,25 @@
+@import 'app-config/styles/_mixins.scss';
+@import 'app-config/styles/_variables.scss';
+
+$themes: (
+  alpha: (
+    wrapper-background: $color-primary,
+    button-background: $color-secondary,
+    button-background-hover: $color-secondary-darker,
+    button-font: $color-font-secondary,
+    input-border: $color-primary-dark,
+    input-border-focus: $color-secondary-darker,
+    input-background: $color-primary,
+    input-background-focus: $color-primary,
+    link-font: $color-secondary-dark,
+    font: $color-font-primary,
+    error: $color-error,
+    success: $color-success,
+  ),  
+);
+
+@mixin font {
+  font-family: 'Comfortaa', cursive;
+  font-size: 1rem;
+  font-weight: 500;
+}

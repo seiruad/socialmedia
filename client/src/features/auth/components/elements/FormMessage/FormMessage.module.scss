@@ -1,0 +1,16 @@
+// @import 'app-config/styles/_mixins.scss';
+@import 'app-config/styles/_variables.scss';
+// @import 'features/auth/feature-config/_styles.module.scss';
+
+.FormMessage {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.MessageSuccess {
+  color: $color-success;
+}
+
+.MessageError {
+  color: $color-error;
+}

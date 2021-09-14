@@ -5,14 +5,14 @@ const config = dotenv.config()
 export const checkAuth = async (req, res, next) => {
   const token = req.header('jwtToken')
 
-  // check if token exist
+  // Check if not token
   if (!token) {
     return res.status(404).json({ 
       type: "DENIED" 
     })
   }
 
-  // verify token
+  // Verify token
   try {
     const verify = await jwt.verify(token, process.env.jwtSecret);
 

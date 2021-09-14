@@ -17,7 +17,7 @@ export default  {
 
   async getAllPosts () {
     const data = await client.query({
-      text: 'SELECT post.*, account.public_name FROM post JOIN account ON (post.account_id = account_id)'
+      text: 'SELECT post.*, account.public_name FROM post JOIN account ON (post.account_id = account.id) ORDER BY created_at DESC LIMIT 500 '
     })
 
     return data.rows

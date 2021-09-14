@@ -9,7 +9,7 @@ const mountRoutes = (app)  => {
     app.use('/post', post)
     app.use('/user', user)
   } catch (err) {
-    console.log('Router Error', {name: err.name, message: err.message})
+    next(err)
   }
 }
 

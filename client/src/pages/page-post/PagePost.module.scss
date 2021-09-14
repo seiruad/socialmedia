@@ -1,0 +1,22 @@
+@import 'app-config/styles/mixins.scss';
+@import 'app-config/styles/variables.scss';
+
+
+div {
+  width: 100%;
+  text-align: center;
+}
+
+
+.Container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.CreatorContainer {
+  margin: 35px 0;
+  width: 100%;
+  
+}

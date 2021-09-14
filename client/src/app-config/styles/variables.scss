@@ -1,0 +1,156 @@
+$border-radius: (
+  default: 8px,
+);
+
+$color-error: #cf400e;
+$color-error: #c62828;
+$color-success: #7cb342;
+
+$color-primary-light: #ffffff;
+$color-primary: #fff3e0;
+$color-primary-dark: #ccc0ae;
+$color-primary-darker: #ffffb0;
+
+$color-secondary-light: #82e9de;
+$color-secondary: #4db6ac;
+$color-secondary-darker: #4f9a94;
+$color-secondary-dark: #00867d;
+
+$color-font-primary: #424242;
+$color-font-secondary: #fffde7;
+
+
+
+
+/* New Colors */
+$background-alpha: #e0b668;
+$background-beta: #dbde88;
+$background-gamma: #bfe3e2;
+
+
+$background-alpha: #cfa351;
+$background-beta: #FBD786;
+$background-gamma: #f7797d;
+
+
+
+
+$white: #fff;
+$white-alpha-aa: rgba($color: #fff, $alpha: .45);
+$white-alpha-a: rgba($color: #fff, $alpha: .4);
+$white-alpha-b: rgba($color: #fff, $alpha: .25);
+
+
+$navbar-width: 260px;
+
+$backdrop-blur: 5px;
+
+$border-radius-alpha: 6px;
+$border-radius-beta: 12px; 
+$br-alpha: 6px;
+$br-beta: 12px;
+
+
+$themes: (
+  vibe: (
+    background-alpha: #EA80FC,
+    background-beta: #FFD180,
+    background-gamma: #69F0AE,
+    middle-glass: rgba($color: #ffffff, $alpha: 0.4),
+    filter-primary: linear-gradient(
+      to right bottom, 
+      rgba($color: #69F0AE, $alpha: 0.15),
+      rgba($color: #fff, $alpha: 0.15)
+  
+    ),
+    gradient: linear-gradient(to right bottom, #ea80fc, #ff7bcd, #ff87a5, #ff9d89, #ffb37f, #fac079, #f1cd78, #e5da7b, #cde17e, #b2e789, #92ec99, #69f0ae),
+  ),
+
+  colorful: (
+    background-alpha: #F4FF81,
+    background-beta: #FF80AB,
+    background-gamma: #84FFFF,
+    middle-glass: rgba($color: #ffffff, $alpha: 0.55),
+    filter-primary: linear-gradient(
+      to right bottom, 
+      rgba($color: #FF80AB, $alpha: 0.15), 
+      rgba($color: #84FFFF, $alpha: 0.15),
+      rgba($color: #fff, $alpha: 0.15)
+  
+    ),
+    gradient: linear-gradient(to right bottom, #f4ff81, #ffe174, #ffc477, #ffaa82, #ff9590, #ff93b0, #fa98d3, #e1a3f4, #b2c1ff, #7fdbff, #68f0ff, #84ffff),
+  ),
+
+  lamp: (
+    background-alpha: #EEFF41,
+    background-beta: #FFD180,
+    background-gamma: #69F0AE,
+    middle-glass: rgba($color: #ffffff, $alpha: .25),
+    filter-primary: linear-gradient(
+      to left bottom, 
+      rgba($color: #fff, $alpha: 0.20), 
+      rgba($color: #fff, $alpha: 0.20), 
+    ),
+    gradient: linear-gradient(to left bottom, #eeff41, #f6f54d, #fcec59, #ffe365, #ffdb71, #f6db74, #eddb77, #e5da7b, #cde17e, #b2e789, #92ec99, #69f0ae),
+  ),
+
+  default: (
+    background-alpha: #00edff,
+    background-beta: #a1f3ae,
+    background-gamma: #ffd180,
+    middle-glass: rgba($color: #ffffff, $alpha: 0.2),
+    filter-primary: linear-gradient(
+      to left top, 
+      rgba($color: #fff, $alpha: 0.2), 
+      rgba($color: #fff, $alpha: 0.15)
+    ),
+    gradient: linear-gradient(
+      to left top, 
+      // #ea80fc, 
+      // #a1a9ff, 
+      // #2bc8ff, 
+      // #00deff, 
+      rgba($color: #00edff, $alpha: 0.6), 
+      rgba($color: #36f2f0, $alpha: 0.6), 
+      rgba($color: #5af7e0, $alpha: 0.8),
+      // #7bfacf, 
+      #a1f3ae, 
+      #c4ea93, 
+      #e4de83, 
+      #ffd180
+    ),
+  ),
+
+  polar: (
+    background-alpha: #EA80FC,
+    background-beta: #46FFFF,
+    background-gamma: #FFD180,
+    gradient: linear-gradient(
+      to right bottom, 
+      #ea80fc, 
+      #a1a9ff, 
+      // #2bc8ff, 
+      #00deff, 
+      #00edff, 
+      #36f2f0, 
+      #5af7e0, 
+      #7bfacf, 
+      #a1f3ae, 
+      #c4ea93, 
+      #e4de83, 
+      #ffd180
+    ),
+    middle-glass: rgba($color: #ffffff, $alpha: .45),
+  ),
+
+  frozen: (
+    background-alpha: #FFFFB0,
+    background-beta: #F4FF81,
+    background-gamma: #a7ffeb,
+    background-image: (
+      radial-gradient(at 47% 33%, hsl(60.00, 100%, 85%) 0, transparent 59%), 
+      radial-gradient(at 82% 65%, hsl(64.90, 69%, 86%) 0, transparent 55%),
+    ),
+  ),
+);
+
